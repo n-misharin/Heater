@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="refresh_button">Обновить</string>
+    <string name="OFF">ВЫКЛ</string>
+    <string name="heating_element">Нагревательный элемент</string>
+    <string name="max_temperature">Максимальная температура</string>
+    <string name="temperature_control">Контроль температуры</string>
+    <string name="ON">ВКЛ</string>
+    <string name="min_temperature">Минимальная температура</string>
+    <string name="current_temperature">Текущая температура</string>
+    <string name="refreshed">Обновлено в</string>
+    <string name="device_not_connected">Устройство не подключено</string>
+    <string name="connected">Подключить</string>
+    <string name="instruction">
+        Вы находитесь в приложении, созданном для контроля температуры нагревательного устройства.
+        Чтобы получать и отправлять данные на устройство, нужно: \n \n
+
+        1) Подключиться к этому устройству по Wi-Fi. \n
+        Включите Wi-Fi. Найдите в списке доступных Wi-Fi сетей «heater v1.0» и подключитесь к ней. \n \n
+
+        2) Снова откройте это приложение и нажмите на кнопку «Подключиться к устройству», которая находится ниже. \n \n
+
+        При успешном подключении в строке статуса будет стоять время обновления (время, когда данные с устройства были приняты приложением). \n \n
+        Если приложению не удастся подключиться к устройству, то в строке статуса появится сообщение «Устройство не подключено».
+    </string>
+    <string name="install">Установить</string>
+    <string name="connect_device">Подключиться к устройству</string>
+    <string name="instruction_title">Инструкция</string>
+</resources>

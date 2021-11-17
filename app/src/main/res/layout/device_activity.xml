@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- curr temperature -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+        <LinearLayout
+            android:layout_weight="30"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/current_temperature"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:layout_height="match_parent"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="70"
+            android:background="@color/normal_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_curr_temp"
+                android:gravity="center_vertical"
+                android:textColor="@color/element_status_text_color"
+                android:textSize="@dimen/status_text_size"
+                android:textAlignment="center"
+                android:text="36"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  cooling status -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+        <LinearLayout
+            android:layout_weight="30"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/heating_element"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:layout_height="match_parent"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="70"
+            android:background="@color/cold_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_status_cooling"
+                android:gravity="center_vertical"
+                android:textColor="@color/element_status_text_color"
+                android:textSize="@dimen/status_text_size"
+                android:textAlignment="center"
+                android:text="@string/OFF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--  heating status -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+        <LinearLayout
+            android:layout_weight="30"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/heating_element"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:layout_height="match_parent"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="70"
+            android:background="@color/hot_element"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_status_heating"
+                android:gravity="center_vertical"
+                android:textColor="@color/element_status_text_color"
+                android:textSize="@dimen/status_text_size"
+                android:textAlignment="center"
+                android:text="@string/ON"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="RtlCompat" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  refresh  -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_refreshed_status"
+                android:textSize="@dimen/status_text_size"
+                android:textColor="@color/element_status_text_color"
+                android:paddingEnd="@dimen/layout_padding"
+                android:background="@color/hot_element"
+                android:textAlignment="center"
+                android:text="@string/refreshed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:backgroundTint="@color/normal_element"
+                android:textColor="@color/element_status_text_color"
+                android:id="@+id/enter_button"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size"
+                android:text="@string/refresh_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="@dimen/layout_margin"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_padding"
+        android:background="?android:attr/listDivider" />
+
+    <!--  min temp  -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/min_temperature"
+                android:textSize="@dimen/text_size"
+                android:textAlignment="center"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="30"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <SeekBar
+                    android:id="@+id/sb_min_temp"
+                    android:max="50"
+                    android:min="20"
+                    android:scrollbarSize="@dimen/status_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="70"
+                android:background="@color/cold_element"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_min_temp"
+                    android:textColor="@color/element_status_text_color"
+                    android:textSize="@dimen/status_text_size"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:text="36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  max temp  -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/max_temperature"
+                android:textSize="@dimen/text_size"
+                android:textAlignment="center"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="30"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <SeekBar
+                    android:id="@+id/sb_max_temp"
+                    android:max="50"
+                    android:min="20"
+                    android:scrollbarSize="@dimen/status_text_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="70"
+                android:background="@color/hot_element"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tv_max_temp"
+                    android:textColor="@color/element_status_text_color"
+                    android:textSize="@dimen/status_text_size"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:text="36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  enabled  -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+        <LinearLayout
+            android:layout_weight="30"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingStart="@dimen/layout_padding"
+                android:text="@string/temperature_control"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/element_text_color"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/layout_padding"
+                android:layout_height="match_parent"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="70"
+            android:background="@color/normal_element"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent">
+            <Switch
+                android:id="@+id/switch_control"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--  refresh  -->
+    <LinearLayout
+        android:background="@color/element_background"
+        android:layout_marginTop="@dimen/layout_margin"
+        android:layout_marginStart="@dimen/layout_margin"
+        android:layout_marginEnd="@dimen/layout_margin"
+        android:paddingTop="@dimen/layout_padding"
+        android:paddingStart="@dimen/layout_padding"
+        android:paddingBottom="@dimen/layout_padding"
+        android:paddingEnd="@dimen/layout_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:weightSum="100"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        tools:ignore="RtlSymmetry">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:backgroundTint="@color/normal_element"
+                android:textColor="@color/element_status_text_color"
+                android:id="@+id/set_settings_button"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size"
+                android:text="@string/install"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
