@@ -82,7 +82,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:paddingStart="@dimen/layout_padding"
-                android:text="@string/heating_element"
+                android:text="@string/cooling_element"
                 android:gravity="center_vertical"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/element_text_color"

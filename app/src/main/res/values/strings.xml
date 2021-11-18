@@ -2,7 +2,8 @@
     <string name="app_name">My Application</string>
     <string name="refresh_button">Обновить</string>
     <string name="OFF">ВЫКЛ</string>
-    <string name="heating_element">Нагревательный элемент</string>
+    <string name="heating_element">Нагрев</string>
+    <string name="cooling_element">Охлаждение</string>
     <string name="max_temperature">Максимальная температура</string>
     <string name="temperature_control">Контроль температуры</string>
     <string name="ON">ВКЛ</string>
